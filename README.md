@@ -234,7 +234,7 @@ LIMIT 5;
 
 
 
-    -- 9. Since my IG username is Emir_Masovic if would like to se all users that have similiar username, or the username that starts with 'Em' or 'Ma'
+    -- 9. Since my IG username is Emir_Masovic, let's find all users that have similiar username, or the username that starts with 'Em' or 'Ma'
 
 SELECT 
     username
