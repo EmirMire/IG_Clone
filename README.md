@@ -103,7 +103,7 @@ After creating the necessary tables that will store the basic Instagram data and
 # TASKS
 
 
--- 1. Finding 5 oldest users
+    -- 1. Finding 5 oldest users
 
 SELECT * FROM users
      ORDER BY created_at
@@ -114,7 +114,7 @@ SELECT * FROM users
 
 
 
--- 2. Most Popular Registration Date (Day)
+    -- 2. Most Popular Registration Date (Day)
 
 SELECT 
     DAYNAME(created_at) AS Day, COUNT(username) AS Total
@@ -129,7 +129,7 @@ LIMIT 1;
 
 
 
--- 3. Identify Inactive Users (users with no photo)
+    -- 3. Identify Inactive Users (users with no photo)
 
 SELECT 
     username, IFNULL(photos.id, 'No Photo') AS Activity
@@ -167,7 +167,7 @@ LIMIT 1;
 
 
 
--- 5. How many times does the average user posts?
+    -- 5. How many times does the average user posts?
 
 -- total number of photos / total number of users
 
@@ -180,7 +180,7 @@ SELECT
 
 
 
--- 6. Find the five most commonly used hashtags
+    -- 6. Find the five most commonly used hashtags
 
 SELECT 
     tag_name, COUNT(*) AS Total
@@ -197,7 +197,7 @@ LIMIT 5;
 
 
 
--- 7. Find users who have liked every single photo on the site (Potential Bots)
+    -- 7. Find users who have liked every single photo on the site (Potential Bots)
  
 SELECT 
     username, COUNT(*) AS num_likes
@@ -216,7 +216,7 @@ HAVING num_likes = (SELECT
 
 
 
--- 8. Find the TOP 5 most popular users (with the most followers)
+    -- 8. Find the TOP 5 most popular users (with the most followers)
 
 SELECT 
     followee_id, username, COUNT(F.follower_id) AS Followers
@@ -234,7 +234,7 @@ LIMIT 5;
 
 
 
--- 9. Since my IG username is Emir_Masovic if would like to se all users that have similiar username, or the username that starts with 'Em' or 'Ma'
+    -- 9. Since my IG username is Emir_Masovic if would like to se all users that have similiar username, or the username that starts with 'Em' or 'Ma'
 
 SELECT 
     username
