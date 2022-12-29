@@ -99,7 +99,9 @@ CREATE TABLE photo_tags (
 After creating the necessary tables that will store the basic Instagram data and inserting data that was acquired online, it is time to do some analytics with the most commonly used SQL functions.
 
 
+
 # TASKS
+
 
 -- 1. Finding 5 oldest users
 
@@ -111,7 +113,8 @@ SELECT * FROM users
 
 
 
--- 2. Most Popular Registartion Date (Day)
+
+-- 2. Most Popular Registration Date (Day)
 
 SELECT 
     DAYNAME(created_at) AS Day, COUNT(username) AS Total
@@ -122,6 +125,7 @@ ORDER BY Total DESC
 LIMIT 1;
 
 ![image](https://user-images.githubusercontent.com/121452974/209992455-8ff89b70-c70c-4ca9-b024-0350827b55ac.png)
+
 
 
 
@@ -137,6 +141,7 @@ WHERE
     photos.id IS NULL;
     
 ![image](https://user-images.githubusercontent.com/121452974/209992770-8dda8a91-8ed0-418b-80c0-00bb5cbccd1b.png)
+
 
 
 
@@ -161,6 +166,7 @@ LIMIT 1;
 
 
 
+
 -- 5. How many times does the average user posts?
 
 -- total number of photos / total number of users
@@ -170,6 +176,7 @@ SELECT
       
       
 ![image](https://user-images.githubusercontent.com/121452974/209992958-8a911419-abe4-4487-baaa-35e16316582c.png)
+
 
 
 
@@ -186,6 +193,7 @@ ORDER BY Total DESC
 LIMIT 5;
 
 ![image](https://user-images.githubusercontent.com/121452974/209993072-f81e3165-8f8d-4c16-a4f3-0bab57ffebb6.png)
+
 
 
 
@@ -207,6 +215,7 @@ HAVING num_likes = (SELECT
 
 
 
+
 -- 8. Find the TOP 5 most popular users (with the most followers)
 
 SELECT 
@@ -224,6 +233,7 @@ LIMIT 5;
 
 
 
+
 -- 9. Since my IG username is Emir_Masovic if would like to se all users that have similiar username, or the username that starts with 'Em' or 'Ma'
 
 SELECT 
@@ -237,6 +247,7 @@ WHERE
         OR username LIKE 'Ma%';
 
 ![image](https://user-images.githubusercontent.com/121452974/209993498-bd647b8a-0dc7-4f5c-8470-bc70b094163f.png)
+
 
 
 
